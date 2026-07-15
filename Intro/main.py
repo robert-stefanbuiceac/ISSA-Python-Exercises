@@ -47,7 +47,9 @@ def prim(a:int)->bool:
         return False
     if a==2:
         return True
-    for d in range(3,int(a**(1/2)),2):
+    if a % 2 == 0:
+        return False
+    for d in range(3,int(a**(1/2))+1,2):
         if a%d==0:
             return False
     return True
