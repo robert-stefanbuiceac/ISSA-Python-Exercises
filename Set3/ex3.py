@@ -48,6 +48,27 @@ def compar_dictionare(d1,d2)->tuple:
             cheile_care_se_gasesc_doar_in_al_doilea_dict.append(i)
     return cheile_care_se_gasesc_doar_in_primul_dict, cheile_care_se_gasesc_doar_in_al_doilea_dict, cheile_comune_dar_cu_valori_diferite
 
-d1 = { "b": [1, 2, {"x": 10}] }
-d2 = { "b": [1, 2, {"x": 99}] }
+d1 = {
+    "nume": "Andrei",
+    "varsta": 20,
+    "note": [10, 9, 8],
+    "adresa": {
+        "oras": "Iasi",
+        "cod_postal": 700123
+    },
+    "materii_preferate": {"Mate", "Info"},
+    "doar_aici": "valoare_unica_1"
+}
+
+d2 = {
+    "nume": "Andrei",
+    "varsta": 21,
+    "note": [10, 9, 7],
+    "adresa": {
+        "oras": "Iasi",
+        "cod_postal": 999999
+    },
+    "materii_preferate": {"Mate", "Info"},
+    "doar_acolo": "valoare_unica_2"
+}
 print(compar_dictionare(d1,d2))
